@@ -3,11 +3,11 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #fdd835, #ffeb3b, #ffecb3); /* Tonos amarillos degradados */
+    background: linear-gradient(to bottom, #fdd835, #ffeb3b, #ffecb3);
     font-family: 'Roboto', sans-serif;
     color: #333;
     margin: 0;
-    overflow: hidden; /* Para que no haya scroll en el cuerpo principal */
+    overflow: hidden;
 }
 
 .container {
@@ -24,7 +24,7 @@ body {
 .title {
     font-family: 'Pacifico', cursive;
     font-size: 2.8em;
-    color: #fbc02d; /* Amarillo más oscuro para el título */
+    color: #fbc02d;
     margin-bottom: 5px;
     line-height: 1.1;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -42,16 +42,17 @@ body {
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .bouquet-img {
-    width: 200px; /* Tamaño de la imagen del ramo */
+    width: 200px;
     height: auto;
-    border: 5px solid #ffcc00; /* Borde amarillo alrededor de la imagen */
-    border-radius: 50%; /* Para que sea circular, si la imagen es cuadrada */
+    border: 5px solid #ffcc00;
+    border-radius: 50%;
     box-shadow: 0 0 15px rgba(255, 223, 0, 0.8);
-    animation: glow 2s infinite alternate; /* Animación de brillo */
+    animation: glow 2s infinite alternate;
 }
 
 @keyframes glow {
@@ -59,6 +60,10 @@ body {
     to { box-shadow: 0 0 25px rgba(255, 223, 0, 1), 0 0 35px rgba(255, 223, 0, 0.6); }
 }
 
+.shrek-audio-player {
+    width: 200px;
+    margin-top: 15px;
+}
 
 .message-intro {
     font-size: 1.1em;
@@ -69,12 +74,12 @@ body {
 .main-message {
     font-size: 1.4em;
     font-weight: 700;
-    color: #e65100; /* Naranja oscuro para destacar */
+    color: #e65100;
     margin-bottom: 30px;
 }
 
 .open-heart-btn {
-    background-color: #ffd700; /* Amarillo dorado */
+    background-color: #ffd700;
     color: #333;
     border: none;
     padding: 15px 30px;
@@ -88,7 +93,7 @@ body {
 }
 
 .open-heart-btn:hover {
-    background-color: #ffc107; /* Amarillo más claro al pasar el mouse */
+    background-color: #ffc107;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
@@ -101,22 +106,21 @@ body {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos del Pop-up de la carta */
 .love-letter-popup {
-    display: none; /* Esta es la única línea 'display' que debe haber */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
     z-index: 1000;
 }
 
 .letter-content {
-    background-color: #fff8e1; /* Color crema para la carta */
+    background-color: #fff8e1;
     padding: 40px;
     border-radius: 10px;
     max-width: 600px;
@@ -171,7 +175,6 @@ body {
     color: #333;
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
     .title {
         font-size: 2em;
@@ -195,5 +198,4 @@ body {
     .letter-content h2 {
         font-size: 2em;
     }
-
 }

@@ -103,14 +103,13 @@ body {
 
 /* Estilos del Pop-up de la carta */
 .love-letter-popup {
-    display: none; /* Oculto por defecto */
+    display: none; /* Esta es la única línea 'display' que debe haber */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
-    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -196,4 +195,5 @@ body {
     .letter-content h2 {
         font-size: 2em;
     }
+
 }

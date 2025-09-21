@@ -1,0 +1,199 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #fdd835, #ffeb3b, #ffecb3); /* Tonos amarillos degradados */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    overflow: hidden; /* Para que no haya scroll en el cuerpo principal */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    position: relative;
+}
+
+.title {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.8em;
+    color: #fbc02d; /* Amarillo más oscuro para el título */
+    margin-bottom: 5px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.flower-bouquet {
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bouquet-img {
+    width: 200px; /* Tamaño de la imagen del ramo */
+    height: auto;
+    border: 5px solid #ffcc00; /* Borde amarillo alrededor de la imagen */
+    border-radius: 50%; /* Para que sea circular, si la imagen es cuadrada */
+    box-shadow: 0 0 15px rgba(255, 223, 0, 0.8);
+    animation: glow 2s infinite alternate; /* Animación de brillo */
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); }
+    to { box-shadow: 0 0 25px rgba(255, 223, 0, 1), 0 0 35px rgba(255, 223, 0, 0.6); }
+}
+
+
+.message-intro {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.main-message {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #e65100; /* Naranja oscuro para destacar */
+    margin-bottom: 30px;
+}
+
+.open-heart-btn {
+    background-color: #ffd700; /* Amarillo dorado */
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.open-heart-btn:hover {
+    background-color: #ffc107; /* Amarillo más claro al pasar el mouse */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.footer-message {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8em;
+    color: #fbc02d;
+    margin-top: 40px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del Pop-up de la carta */
+.love-letter-popup {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.letter-content {
+    background-color: #fff8e1; /* Color crema para la carta */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeIn 0.5s ease-out;
+    text-align: left;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.letter-content h2 {
+    font-family: 'Pacifico', cursive;
+    color: #e65100;
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.letter-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.letter-content .signature {
+    font-family: 'Pacifico', cursive;
+    text-align: right;
+    font-size: 1.4em;
+    margin-top: 30px;
+    color: #e65100;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 3em;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .title {
+        font-size: 2em;
+    }
+    .bouquet-img {
+        width: 150px;
+    }
+    .main-message {
+        font-size: 1.2em;
+    }
+    .open-heart-btn {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+    .footer-message {
+        font-size: 1.5em;
+    }
+    .letter-content {
+        padding: 25px;
+    }
+    .letter-content h2 {
+        font-size: 2em;
+    }
+}
